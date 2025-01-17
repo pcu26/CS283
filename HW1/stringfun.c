@@ -17,9 +17,10 @@ void reverse_string(char *, int);
 void word_print(char *, int);
 
 int setup_buff(char *buff, char *user_str, int len) {
+    //TODO: #4: Implement the setup buff as per the directions
     int str_length = strlen(user_str);
 
-    // Check if the input string exceeds buffer size
+    //check if the input string exceeds buffer size
     if (len > BUFFER_SZ) len = BUFFER_SZ;
 
     int bufferPos = 0;
@@ -73,7 +74,7 @@ int setup_buff(char *buff, char *user_str, int len) {
         }
     }
 
-    // Remove trailing space
+    //remove space at the end
     if (bufferPos > 0 && buff[bufferPos - 1] == ' ') {
         --bufferPos;
     }
@@ -84,7 +85,7 @@ int setup_buff(char *buff, char *user_str, int len) {
 }
 
 
-// reverse string function
+//reverse string function
 void reverse_string(char *buff, int len) {
     int start = 0;
     while (start < len && buff[start] == ' ') {
@@ -108,7 +109,7 @@ void word_print(char *buff, int len) {
     for (int i = 0; i <= len; i++) {
         char current_char = buff[i];
 
-        // detect end of the word
+        //detect end of the word
         if ((current_char == ' ' || current_char == '\0') && in_word) {
             in_word = 0;
             word_count++;
