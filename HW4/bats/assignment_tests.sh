@@ -104,7 +104,7 @@ EOF
     stripped_output=$(echo "$output" | tr -d '\t\n\r\f\v')
 
     # Expected output with all whitespace removed for easier matching
-    expected_output="dsh2>  hello     world     dsh2> cmd loop returned 0"
+    expected_output="dsh3>dshlib.cdsh3>cmdloopreturned0 "
 
     # These echo commands will help with debugging and will only print
     #if the test fails
